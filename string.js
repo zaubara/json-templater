@@ -58,8 +58,7 @@ function replace(input, view) {
     if (undefined === value || null === value) {
       return original;
     }
-
-    if (typeof value === 'object') {
+    if (typeof value === 'object' || typeof value === 'boolean' || typeof value === 'number') {
       result = value;
       return;
     }
